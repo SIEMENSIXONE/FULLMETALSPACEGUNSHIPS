@@ -50,40 +50,11 @@ public class IO {
         return stringBuilder.toString();
     }
 
-//    public static HashMap<String, String> fillLoginsAndPasswords() {
-//        HashMap<String, String> loginsAndPasswords = new HashMap<>();
-////        try (BufferedReader reader = new BufferedReader(new FileReader(usersFilePath))) {
-//        try (BufferedReader reader = new BufferedReader(new FileReader(String.valueOf(usersFilePath)))) {
-//            String line = null;
-//            while ((line = reader.readLine()) != null) {
-//                char[] tmp = line.toCharArray();
-//                for (int i = 0; i < tmp.length; i++) {
-//                    if (tmp[i] == ' ') tmp[i] = '\n';
-//                }
-//                line = new String(tmp);
-//                Scanner scanner = new Scanner(line);
-//                String name;
-//                String password;
-//                if (scanner.hasNextLine()) name = scanner.nextLine();
-//                else return new HashMap<>();
-//                if (scanner.hasNextLine()) password = scanner.nextLine();
-//                else return new HashMap<>();
-//                loginsAndPasswords.put(name, password);
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//
-//        if (loginsAndPasswords.isEmpty()) return new HashMap<>();
-//        return loginsAndPasswords;
-//    }
-
     public static HashMap<String, String> fillLoginsAndPasswords() throws IOException {
         HashMap<String, String> loginsAndPasswords = new HashMap<>();
         InputStream usersFile = getFileAsIOStream(usersFilePath);
 
         byte[] usersFileBytes = usersFile.readAllBytes();
-        //try (BufferedReader reader = new BufferedReader(new FileReader(String.valueOf(usersFilePath)))) {
         Scanner reader = new Scanner(new String(usersFileBytes));
         String line = null;
         while (reader.hasNextLine()) {

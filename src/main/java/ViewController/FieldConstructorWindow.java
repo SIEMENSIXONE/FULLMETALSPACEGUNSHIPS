@@ -344,18 +344,6 @@ public class FieldConstructorWindow extends JPanel implements Runnable {
         String deleteIconString = path + "deleteIcon.png";
         String rulerIconString = path + "ruler.png";
 
-//        shiBlockIcon = new ImageIcon(shipBlockIconString);
-//        fieldBackgroundIcon = new ImageIcon(fieldBackgroundIconString);
-//        fourHorizontalIcon = new ImageIcon(fourHorizontalIconString);
-//        fourVerticalIcon = new ImageIcon(fourVerticalIconString);
-//        threeHorizontalIcon = new ImageIcon(threeHorizontalIconString);
-//        threeVerticalIcon = new ImageIcon(threeVerticalIconString);
-//        twoHorizontalIcon = new ImageIcon(twoHorizontalIconString);
-//        twoVerticalIcon = new ImageIcon(twoVerticalIconString);
-//        oneIcon = new ImageIcon(oneIconString);
-//        deleteIcon = new ImageIcon(deleteIconString);
-//        rulerIcon = new ImageIcon(rulerIconString);
-
         shiBlockIcon = new ImageIcon(getFileAsIOStream(shipBlockIconString).readAllBytes());
         fieldBackgroundIcon = new ImageIcon(getFileAsIOStream(fieldBackgroundIconString).readAllBytes());
         fourHorizontalIcon = new ImageIcon(getFileAsIOStream(fourHorizontalIconString).readAllBytes());

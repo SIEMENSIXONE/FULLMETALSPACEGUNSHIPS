@@ -53,7 +53,6 @@ import java.util.*;
                 ioe.printStackTrace();
 
             }
-            //System.out.println("User joined!");
         }
 
     }
@@ -65,7 +64,6 @@ import java.util.*;
             while (true) {
                 if (System.currentTimeMillis() - startUsersOnlineUpdate >= usersOnlineUpdateDelay) {
                     updateOnline();
-                    //System.out.println(usersOnline.toString());
                     startUsersOnlineUpdate = System.currentTimeMillis();
                 }
 
@@ -154,10 +152,6 @@ import java.util.*;
                 out.println(nickname + " : " + message);
             }
         }
-
-//        public void sendMessageThread(String nickname, String message) {
-//            if (Objects.equals(this.nickname, nickname)) out.println(nickname + " " + message);
-//        }
 
         public void sendMessageThreadNoNick(String nickname, String message) {
             if (Objects.equals(this.nickname, nickname)) out.println(message);
@@ -267,7 +261,6 @@ import java.util.*;
     public void sendMessage(String nickname, String message) {
         for (int i = 0; i < clientThreads.size(); i++) {
             if (clientThreads.get(i).isAlive()) {
-//                clientThreads.get(i).sendMessageThread(nickname, message);
                 clientThreads.get(i).sendMessageThreadNoNick(nickname, message);
             }
         }
@@ -310,9 +303,6 @@ import java.util.*;
                 if (scanner.hasNextLine()) nickName = scanner.nextLine();
                 else return false;
                 usersWaiting.remove(nickName);
-                //System.out.println("Removed from waiting list:");
-                //System.out.println(usersWaiting);
-                //writeToLog(nickName + " found his opponent.");
                 return true;
             }
         }
@@ -369,8 +359,6 @@ import java.util.*;
                 if (scanner.hasNextLine()) nickName = scanner.nextLine();
                 else return false;
                 usersWaiting.add(nickName);
-                //System.out.println("Added to waiting list:");
-                //System.out.println(usersWaiting);
                 writeToLog(nickName + " started waiting for opponent!");
                 return true;
             }
@@ -414,7 +402,6 @@ import java.util.*;
     public boolean getPlayersCheck(String clientCommand, String nickname) {
         if (clientCommand.equals("@getUsers")) {
             StringBuilder stringBuilder = new StringBuilder();
-            //stringBuilder.append('|');
             for (int i = 0; i < usersOnline.size(); i++) {
                 if ((!nickname.equals(usersOnline.get(i))) && (usersWaiting.contains(usersOnline.get(i)))) {
                     stringBuilder.append(usersOnline.get(i));

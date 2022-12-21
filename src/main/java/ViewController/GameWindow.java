@@ -29,8 +29,6 @@ public class GameWindow extends JPanel implements Runnable {
     int cursorY;
     int scopeCordX = 0;
     int scopeCordY = 0;
-    boolean chosenAxis;
-    int chosenShipSize;
     boolean isRunning;
     boolean isMyTurn;
     Thread thread;
@@ -47,7 +45,6 @@ public class GameWindow extends JPanel implements Runnable {
     Image shot;
     Image ruler;
 
-    protected boolean spaceStatus = false;
     protected boolean qStatus = false;
     protected boolean enterStatus = false;
     int[] shootCords = new int[2];
@@ -271,14 +268,6 @@ public class GameWindow extends JPanel implements Runnable {
         String rulerIconString = path + "ruler.png";
         String missedIconString = path + "missed.png";
         String shotIconString = path + "shot.png";
-
-
-//        shiBlockIcon = new ImageIcon(shipBlockIconString);
-//        fieldBackgroundIcon = new ImageIcon(fieldBackgroundIconString);
-//        deleteIcon = new ImageIcon(deleteIconString);
-//        missedIcon = new ImageIcon(missedIconString);
-//        shotIcon = new ImageIcon(shotIconString);
-//        rulerIcon = new ImageIcon(rulerIconString);
 
         shiBlockIcon = new ImageIcon(getFileAsIOStream(shipBlockIconString).readAllBytes());
         fieldBackgroundIcon = new ImageIcon(getFileAsIOStream(fieldBackgroundIconString).readAllBytes());

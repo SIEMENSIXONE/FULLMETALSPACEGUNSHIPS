@@ -547,7 +547,6 @@ public class Model {
         for (int i = 0; i < opponentField.length; i++) {
             for (int j = 0; j < opponentField.length; j++) {
                 stringBuilder.append(opponentField[i][j]);
-                //stringBuilder.append(' ');
             }
             stringBuilder.append('\n');
         }

@@ -1,0 +1,11 @@
+2022-12-20T20:57:50.143829 - Server launched!
+2022-12-20T20:57:55.767669 - New user joined!
+2022-12-20T20:58:00.113016 - User logged in as: Misha
+2022-12-20T20:58:08.938232 - Misha started waiting for opponent!
+2022-12-20T20:58:11.959435 - New user joined!
+2022-12-20T20:58:18.897653 - User logged in as: Masha
+2022-12-20T20:58:30.030994 - Masha and Misha started a match. 
+2022-12-20T20:58:58.189257 - Misha found his opponent.
+2022-12-20T21:04:14.788504 - Server launched!
+2022-12-20T21:04:17.769607 - New user joined!
+2022-12-20T21:04:22.952570 - User logged in as: Misha
